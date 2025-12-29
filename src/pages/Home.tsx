@@ -13,6 +13,13 @@ function Home() {
               마음에 드는 곳은 즐겨찾기해두세요.
             </p>
 
+            <div className="hero__pills" aria-label="핵심 포인트">
+              <span className="pill">네이버 지도 길찾기</span>
+              <span className="pill">즐겨찾기</span>
+              <span className="pill">거리/평가 필터</span>
+              <span className="pill">이벤트 표시</span>
+            </div>
+
             <div className="hero__cta">
               <a className="button button--primary" href={appStoreUrl} target="_blank" rel="noreferrer">
                 App Store에서 받기
@@ -21,11 +28,16 @@ function Home() {
                 기능 보기
               </a>
             </div>
+
+            <div className="hero__meta">iOS 지원</div>
           </div>
 
           <div className="hero__visual">
-            <div className="mock">
-              <img className="mock__image" src="/app.png" alt="분위기 좋은 카페 앱 화면" />
+            <div className="phone" aria-hidden>
+              <div className="phone__frame">
+                <div className="phone__notch" />
+                <img className="phone__image" src="/app.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -101,6 +113,29 @@ function Home() {
                 <div className="step__body">네이버 지도에서 길찾기를 시작할 수 있어요.</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className="section__title">자주 묻는 질문</h2>
+
+          <div className="faq">
+            <details className="faq__item">
+              <summary className="faq__q">길찾기는 어떤 지도를 지원하나요?</summary>
+              <div className="faq__a">현재는 네이버 지도 길찾기만 지원합니다.</div>
+            </details>
+
+            <details className="faq__item">
+              <summary className="faq__q">즐겨찾기는 어디에 저장되나요?</summary>
+              <div className="faq__a">즐겨찾기 정보는 앱에서 관리됩니다.</div>
+            </details>
+
+            <details className="faq__item">
+              <summary className="faq__q">카페 정보가 달라요. 수정 요청이 가능한가요?</summary>
+              <div className="faq__a">앱에서 정보 수정 요청을 남길 수 있습니다.</div>
+            </details>
           </div>
         </div>
       </section>
