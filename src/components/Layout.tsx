@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
 function Layout() {
+  const [isNavOpen, setIsNavOpen] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
   const appStoreUrl = 'https://apps.apple.com/kr/app/id6756539955'
+  const playStoreUrl = 'http://play.google.com/store/apps/details?id=kr.brunchcafe'
 
   return (
     <div className="app-shell">
@@ -16,7 +19,18 @@ function Layout() {
             <span className="brand__text">분위기 좋은 카페</span>
           </Link>
 
-          <nav className="nav" aria-label="주요 링크">
+          <button
+            className="nav-toggle"
+            aria-label="메뉴 열기"
+            aria-expanded={isNavOpen}
+            onClick={() => setIsNavOpen(!isNavOpen)}
+          >
+            <span className="nav-toggle__line" />
+            <span className="nav-toggle__line" />
+            <span className="nav-toggle__line" />
+          </button>
+
+          <nav className="nav" aria-label="주요 링크" data-visible={isNavOpen}>
             <a className="nav__link" href={isHome ? '#features' : '/#features'}>
               기능
             </a>
@@ -25,6 +39,9 @@ function Layout() {
             </a>
             <a className="nav__link" href={appStoreUrl} target="_blank" rel="noreferrer">
               App Store
+            </a>
+            <a className="nav__link" href={playStoreUrl} target="_blank" rel="noreferrer">
+              Google Play
             </a>
             <Link className="nav__link" to="/privacy">
               개인정보처리방침
