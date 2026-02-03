@@ -64,8 +64,8 @@ function Layout() {
             <Link className="footer__link" to="/privacy">
               개인정보처리방침
             </Link>
-            <a className="footer__link" href="mailto:ceo@brunchcafe.kr">
-              문의: ceo@brunchcafe.kr
+                        <a className="footer__link" href="mailto:support@brunchcafe.kr">
+              문의: support@brunchcafe.kr
             </a>
             <div className="footer__meta">© {new Date().getFullYear()} BrunchCafe</div>
           </div>

@@ -175,8 +175,8 @@ function Home() {
               </a>
             </div>
 
-            <div className="download__meta">
-              문의: <a href="mailto:ceo@brunchcafe.kr">ceo@brunchcafe.kr</a>
+                        <div className="download__meta">
+              문의: <a href="mailto:support@brunchcafe.kr">support@brunchcafe.kr</a>
             </div>
           </div>
         </div>
